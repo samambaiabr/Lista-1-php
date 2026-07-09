@@ -1,10 +1,15 @@
 <?php
 $nomeCliente = "Joao ";
-$Valor = 1000.00;
 $NomeEvento = "Festa de Aniversario";
+$Valor = 1000.00;
 $Participantes = 50;
 $ValorParticipante = 10;
-$Entrada = 0.30; 
+$Entrada = $Valor * 0.30;
+$valorRestante = $Valor - $Entrada;
+$ValorComDesconto = $valorRestante * 0.10;
+$taxaOrganizacao = $ValorComDesconto * 0.05;
+$valorFinal = $ValorComDesconto + $taxaOrganizacao;
+$valorMedio = $valorFinal / $Participantes;
 
 ?>
 
@@ -22,7 +27,19 @@ $Entrada = 0.30;
     <P>Criar variáveis para armazenar: Nome do cliente, Nome do evento, Quantidade
         de participantes, Valor por participante
     </P>
-    
+    <p>
+        <?php
+        echo ("Valor Total:") . $Valor . "<br>";
+        echo ("Participantes:") . $Participantes . "<br>";
+echo ("Entrada (30%):") . $Entrada . "<br>";
+echo ("Valor Restante:") . $valorRestante . "<br>";
+echo ("Valor com Desconto (10%):"). $ValorComDesconto . "<br>";
+echo ("Taxa de Organização (5%): ") . $taxaOrganizacao . "<br>";
+echo ("Valor Final com Taxa: ") . $valorFinal . "<br>";
+echo ("Valor Médio por Participante:") . $valorMedio . "<br>"; 
+        ?>
+    </p>
+
 
 </body>
 
