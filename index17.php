@@ -1,4 +1,9 @@
 <?php
+$valorVeiculo = 50000.00;
+$Imposto1 = $valorVeiculo * 0.45;
+$valorComImpostos = $valorVeiculo + $Imposto1;
+$lucroConcessionaria = $valorComImpostos * 0.28;
+$ValorFinal = $valorComImpostos + $lucroConcessionaria;
 
 ?>
 
@@ -17,6 +22,9 @@ impostos e a porcentagem do distribuidor. Primeiro, aplique 45% de impostos
 sobre o custo de fábrica e depois aplique 28% do distribuidor sobre o resultado.
 Escreva um algoritmo que leia o custo de fábrica e informe o custo final ao
 consumidor
+    </p>
+    <p>
+        <?php echo("Total:") . $ValorFinal ?>
     </p>
 </body>
 </html>
